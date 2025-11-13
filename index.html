@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <div class="navbar navbar-expand-lg">
+    <div class="navbar navbar-expand-lg bg-light">
       <div
         class="container-fluid col-md-12 ms-0 px-5 py-4 position-fixed mt-5 w-100"
         style="
@@ -33,14 +33,14 @@
           backdrop-filter: blur(20px);
         "
       >
-        <a href="#" class="navbar-brand ms-5 px-5 h1"> Axis</a>
+        <a href="#" class="navbar-brand offset-lg-1 h1"> Axis</a>
         <a href="#" class="navbar-brand">
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#nav"
-            aria-controls="nav"
+            aria-controls="#nav"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -48,16 +48,20 @@
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav ms-auto small me-5 px-4">
             <li class="nav-item">
-              <a href="#" class="nav-link active">Home</a>
-            </li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Services</a>
+              <a href="#" class="nav-link active"><small>Home</small></a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Portfolio</a>
+              <a href="#" class="nav-link"><small>About</small></a>
             </li>
-            <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"><small>Services</small></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"><small>Portfolio</small></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"><small>Team</small></a>
+            </li>
             <li class="nav-item dropdown">
               <a
                 href="#"
@@ -65,12 +69,12 @@
                 role="button"
                 data-bs-toggle="dropdown"
                 data-bs-auto-close="outside"
-                >Dropdown</a
+                ><small>Dropdown</small></a
               >
               <ul class="dropdown-menu text-start">
                 <li>
                   <a href="#" class="dropdown-item text-muted small"
-                    >Dropdown 1</a
+                    ><small>Dropdown 1</small></a
                   >
                 </li>
                 <li class="nav-item dropdown small ms-2 dropstart">
@@ -80,34 +84,36 @@
                     role="button"
                     data-bs-toggle="dropdown"
                     data-bs-auto-close="outside"
+                    data-bs-display="static"
+                    aria-expanded="false"
                   >
-                    Deep Dropdown</a
+                    <small>Deep Dropdown</small></a
                   >
 
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu dropdown-lg-start">
                     <li>
                       <a href="#" class="dropdown-item text-muted small"
-                        >Deep Dropdown 1</a
+                        ><small>Deep Dropdown 1</small></a
                       >
                     </li>
                     <li>
                       <a href="#" class="dropdown-item text-muted small"
-                        >Deep Dropdown 2</a
+                        ><small>Deep Dropdown 2</small></a
                       >
                     </li>
                     <li>
                       <a href="#" class="dropdown-item text-muted small"
-                        >Deep Dropdown 3</a
+                        ><small>Deep Dropdown 3</small></a
                       >
                     </li>
                     <li>
                       <a href="#" class="dropdown-item text-muted small"
-                        >Deep Dropdown 4</a
+                        ><small>Deep Dropdown 4</small></a
                       >
                     </li>
                     <li>
                       <a href="#" class="dropdown-item text-muted small"
-                        >Deep Dropdown 5</a
+                        ><small>Deep Dropdown 5</small></a
                       >
                     </li>
                   </ul>
@@ -115,23 +121,25 @@
 
                 <li>
                   <a href="#" class="dropdown-item text-muted small"
-                    >Dropdown 2</a
+                    ><small>Dropdown 2</small></a
                   >
                 </li>
                 <li>
                   <a href="#" class="dropdown-item text-muted small"
-                    >Dropdown 3</a
+                    ><small>Dropdown 3</small></a
                   >
                 </li>
                 <li>
                   <a href="#" class="dropdown-item text-muted small"
-                    >Dropdown 4</a
+                    ><small>Dropdown 4</small></a
                   >
                 </li>
               </ul>
             </li>
 
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"><small>Contact</small></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -156,31 +164,63 @@
           </div>
           <div class="row mt-3 mb-3">
             <div
-              class="col-md-8"
+              class="col-md-8 hero-btn"
               style="animation: zoom-in 2.2s; animation-delay: 0.2s"
             >
               <button class="btn btn-dark rounded btn-sm me-4" type="button">
                 Get Started Today
               </button>
-              <a href="#" class="text-decoration-none text-dark">
+              <a href="#" class="text-decoration-none text-dark" type="button">
                 <span><i class="fa-regular fa-circle-play"></i></span>
                 Watch Video</a
               >
             </div>
           </div>
-          <div class="row">
-            <div class="col-md d-flex">
-              <div class="col-md-3 me-3">
-                <h4 class="text-success">500+</h4>
-                <p class="small text-muted">Successful Projects</p>
+          <div class="col-md counter.cards d-flex">
+            <div class="row">
+              <div class="counter-card col-md-3 me-3">
+                <div class="d-flex">
+                  <div
+                    class="text-success counter-number fw-bold h3"
+                    data-target="500"
+                  >
+                    0
+                  </div>
+                  <span class="text-success fw-bold h3">+</span>
+                </div>
+                <p class="small text-muted counter-title">
+                  <small>Successful Projects</small>
+                </p>
               </div>
-              <div class="col-md-3 me-3">
-                <h4 class="text-success">98%</h4>
-                <p class="small text-muted">Client Satisfaction</p>
+
+              <div class="counter-card col-md-3 me-3">
+                <div class="d-flex">
+                  <div
+                    class="text-success counter-number fw-bold h3"
+                    data-target="98"
+                  >
+                    0
+                  </div>
+                  <span class="text-success fw-bold h3">%</span>
+                </div>
+                <p class="small text-muted counter-title">
+                  <small>Client Satisfaction </small>
+                </p>
               </div>
-              <div class="col-md-3">
-                <h4 class="text-success">10+</h4>
-                <p class="small text-muted">Years Experience</p>
+
+              <div class="counter-card col-md-3 me-3">
+                <div class="d-flex">
+                  <div
+                    class="text-success counter-number fw-bold h3"
+                    data-target="10"
+                  >
+                    0
+                  </div>
+                  <span class="text-success fw-bold h3">+</span>
+                </div>
+                <p class="small text-muted counter-title">
+                  <small>Years Experience</small>
+                </p>
               </div>
             </div>
           </div>
@@ -200,7 +240,7 @@
                 ></i>
               </div>
               <div class="mt-2">
-                <h6 class="small">Revenue Growth</h6>
+                <h6 class="small"><small>Revenue Growth</small></h6>
                 <strong><p class="text-success">45%</p></strong>
               </div>
             </div>
@@ -210,99 +250,126 @@
     </div>
     <!-- end hero sec -->
     <!-- About sec-->
-    <div class="container justify-content-center bg-white py-5">
-      <div class="row mt-2">
-        <div
-          class="col-md-8 text-center offset-md-2"
-          style="animation: zoom-in 1.5s"
-        >
-          <p><ins>About</ins></p>
-          <h5 class="display-5">About Us</h5>
-          <p class="small text-muted">
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-            consectetur velit. Sed ut perspiciatis unde omnis iste natus error
-            sit voluptatem accusantium doloremque laudantium totam rem aperiam
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6" style="animation: slide-from-left 2s">
-          <div class="row mt-4">
-            <div class="col-md-12">
-              <h1>Crafting Excellence Through Innovation and Dedication</h1>
-              <p class="mt-3 text-muted">
-                We are passionate professionals committed to delivering
-                exceptional results that exceed expectations and drive
-                meaningful transformation.
-              </p>
-              <p class="mt-3 small text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-          <div class="row mt-4">
-            <div class="col-md-12 d-flex">
-              <div class="col-md-4">
-                <h4 class="text-success">15</h4>
-                <p class="small text-muted">Years of Experience</p>
-              </div>
-              <div class="col-md-4">
-                <h4 class="text-success">850</h4>
-                <p class="small text-muted">Projects Completed</p>
-              </div>
-              <div class="col-md-4">
-                <h4 class="text-success">240</h4>
-                <p class="small text-muted">Happy Clients</p>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div
-              class="col-md-3"
-              style="animation: zoom-in 2.2s; animation-delay: 0.2s"
-            >
-              <strong>
-                <button
-                  class="btn btn-dark rounded border-light btn-sm"
-                  type="button"
-                >
-                  Meet Our Team
-                </button></strong
-              >
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-md-6 position-relative"
-          style="animation: slide-from-right 2s"
-        >
-          <img class="img-fluid rounded mt-5" src="./images/img3" alt="" />
-
+    <div class="container-fluid bg-white">
+      <div class="container justify-content-center py-5">
+        <div class="row mt-2">
           <div
-            class="col-md-3 small bg-white rounded position-absolute py-1 px-2 d-flex align-items-center bottom-0 p-1 offset-md-6 me-5"
-            style="
-              transform: translateX(135px);
-              animation: zoom-in 2.2s;
-              animation-delay: 0.2s;
-            "
+            class="col-md-8 text-center mx-auto"
+            style="animation: zoom-in 1.5s"
           >
-            <div class="col-md-5 small">
-              <i
-                class="fa-solid fa-award fa-beat fa-lg p-3"
-                style="color: #2e7613"
-              ></i>
+            <p><ins>About</ins></p>
+            <h5 class="display-5">About Us</h5>
+            <p class="small text-muted">
+              Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+              consectetur velit. Sed ut perspiciatis unde omnis iste natus error
+              sit voluptatem accusantium doloremque laudantium totam rem aperiam
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6" style="animation: slide-from-left 2s">
+            <div class="row mt-4">
+              <div class="col-md-12">
+                <h1>Crafting Excellence Through Innovation and Dedication</h1>
+                <p class="mt-3 text-muted">
+                  We are passionate professionals committed to delivering
+                  exceptional results that exceed expectations and drive
+                  meaningful transformation.
+                </p>
+                <p class="mt-3 small text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+              </div>
             </div>
-            <div class="col-md-7 small">
-              <h5 class="small">Award Winning</h5>
-              <p class="small text-muted">
-                Recognized for excellence in our industry
-              </p>
+            <div class="row mt-4">
+              <div class="col-md-12 d-flex">
+                <div class="counter-card col-md-4">
+                  <div class="d-flex">
+                    <div
+                      class="text-success counter-number fw-bold h3"
+                      data-target="10"
+                    >
+                      0
+                    </div>
+                    <span class="text-success fw-bold h3">+</span>
+                  </div>
+                  <p class="small text-muted counter-title">
+                    <small>Years of Experience</small>
+                  </p>
+                </div>
+                <div class="counter-card col-md-4">
+                  <div
+                    class="text-success counter-number fw-bold h3"
+                    data-target="850"
+                  >
+                    0
+                  </div>
+                  <p class="small text-muted counter-title">
+                    <small>Projects Completed</small>
+                  </p>
+                </div>
+                <div class="counter-card col-md-4">
+                  <div
+                    class="text-success counter-number fw-bold h3"
+                    data-target="240"
+                  >
+                    0
+                  </div>
+                  <p class="small text-muted counter-title">
+                    <small>Happy Clients</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div
+                class="col-md-3"
+                style="animation: zoom-in 2.2s; animation-delay: 0.2s"
+              >
+                <strong>
+                  <button
+                    class="btn btn-dark rounded border-light btn-sm"
+                    type="button"
+                  >
+                    Meet Our Team
+                  </button></strong
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 position-relative"
+            style="animation: slide-from-right 2s"
+          >
+            <img class="img-fluid rounded mt-5" src="./images/img3" alt="" />
+
+            <div
+              class="col-md-3 small bg-white rounded position-absolute py-1 px-2 d-flex align-items-center bottom-0 p-1 offset-md-6 me-5"
+              style="
+                transform: translateX(135px);
+                animation: zoom-in 2.2s;
+                animation-delay: 0.2s;
+              "
+            >
+              <div class="col-md-5 small">
+                <i
+                  class="fa-solid fa-award fa-beat fa-lg p-3"
+                  style="color: #2e7613"
+                ></i>
+              </div>
+              <div class="col-md-7 small">
+                <h5 class="small">Award Winning</h5>
+                <p class="small text-muted">
+                  Recognized for excellence in our industry
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -310,10 +377,11 @@
     </div>
     <!-- end about sec -->
     <!-- services sec -->
-    <div class="container justify-content-center">
-      <div class="row mt-5">
+   <div class="container-fluid services justify-content-center align-items-center d-flex bg-light">
+<div class="container justify-content-center">
+     <div class="row mt-5">
         <div
-          class="col-md-8 offset-md-2 text-center mb-5 mt-2"
+          class="col-md-8 mx-auto text-center mb-5 mt-2"
           style="animation: zoom-in 2s"
         >
           <p><ins>Services</ins></p>
@@ -325,213 +393,214 @@
           </p>
         </div>
       </div>
-
-      <div class="row g-2 mb-2">
-        <div class="col-md-4">
-          <div class="card card1" style="animation: slide-from-left 2s">
+    <div class="row g-5 mx-auto  justify-content-center ms-5">
+      <div class="col-md-4">
+        <div class="card card1" style="animation: slide-from-left2 2s">
+          <div class="card-header header1 header-all" style="border-radius:100% 0% 100% 0% / 0% 50% 50% 100%;">
+            <i
+              class="fa-solid fa-chess-knight fa-fade  mt-3 border rounded-circle py-3 bg-light"
+              style="height: 80px; width: 80px; font-size: 40px; color: #f12711;"
+            ></i></div>
             <div
-              class="card-body text-center align-items-center d-flex flex-column position-relative"
-            >
-              <i
-                class="fa-solid fa-chess-knight fa-fade bg-dark mt-3 text-white border rounded-circle py-3"
-                style="height: 80px; width: 80px; font-size: 40px"
-              ></i>
-              <h5 class="card-title mt-3">Strategic Consulting</h5>
-              <p class="card-text small text-muted mb-3">
-                Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Vestibulum tortor quam.
-              </p>
-            </div>
-
-            <div class="card-footer justify-content-end d-flex">
-              <a
-                href="#"
-                class="card-link text-decoration-none text-dark small align-self-end"
-                type="button"
-              >
-                Read More
-                <span
-                  ><i class="fa-solid fa-arrow-right" style="color: #000000"></i
-                ></span>
-              </a>
-            </div>
+            class="card-body text-center align-items-center d-flex flex-column position-relative" style="font-size: 15px;"
+          >
+            <h5 class="card-title mt-3">Strategic Consulting</h5>
+            <p class="card-text small text-muted mb-3">
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas. Vestibulum tortor quam.
+            </p>
           </div>
-        </div>
 
-        <div class="col-md-4">
-          <div class="card card1" style="animation: zoom-in 2s">
-            <div
-              class="card-body text-center align-items-center d-flex flex-column"
+          <div class="card-footer justify-content-center d-flex">
+            <a
+              href="#"
+              class="card-link text-decoration-none text-white  small one"
+              type="button"
             >
-              <i
-                class="fa-solid fa-splotch fa-fade bg-dark mt-3 text-white border rounded-circle py-3"
-                style="height: 80px; width: 80px; font-size: 40px"
-              ></i>
-              <h5 class="card-title mt-3">Brand Development</h5>
-              <p class="card-text small text-muted mb-3">
-                Sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-              </p>
-            </div>
-
-            <div class="card-footer justify-content-end d-flex">
-              <a
-                href="#"
-                class="card-link text-decoration-none text-dark small align-self-end"
-                type="button"
-              >
-                Read More
-                <span
-                  ><i class="fa-solid fa-arrow-right" style="color: #000000"></i
-                ></span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card card1" style="animation: slide-from-right 2s">
-            <div
-              class="card-body text-center align-items-center d-flex flex-column"
-            >
-              <i
-                class="fa-solid fa-code fa-fade bg-dark mt-3 text-white border rounded-circle py-3"
-                style="
-                  color: #000000;
-                  height: 80px;
-                  width: 80px;
-                  font-size: 40px;
-                "
-              ></i>
-              <h5 class="card-title mt-3">Digital Solutions</h5>
-              <p class="card-text small text-muted mb-3">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris
-                vitae congue nulla. Proin eget tortor risus vestibulum.
-              </p>
-            </div>
-
-            <div class="card-footer justify-content-end d-flex">
-              <a
-                href="#"
-                class="card-link text-decoration-none text-dark small align-self-end"
-                type="button"
-              >
-                Read More
-                <span
-                  ><i class="fa-solid fa-arrow-right" style="color: #000000"></i
-                ></span>
-              </a>
-            </div>
+              Read More
+              <span
+                ><i class="fa-solid fa-arrow-right" style="color: white"></i
+              ></span>
+            </a>
           </div>
         </div>
       </div>
 
-      <div class="row g-2">
-        <div class="col-md-4">
-          <div class="card card1" style="animation: slide-from-left 2s">
-            <div
-              class="card-body text-center align-items-center d-flex flex-column"
-            >
-              <i
-                class="fa-solid fa-cubes fa-fade bg-dark text-white border mt-3 rounded-circle py-3"
-                style="height: 80px; width: 80px; font-size: 40px"
-              ></i>
-              <h5 class="card-title mt-3">Marketing Strategies</h5>
-              <p class="card-text small text-muted mb-3">
-                Vivamus magna justo lacinia eget consectetur sed convallis at
-                tellus. Cras ultricies ligula sed magna dictum porta.
-              </p>
+      <div class="col-md-4">
+        <div class="card card1">
+         <div class="card-header header2 header-all"  style="border-radius:100% 0% 100% 0% / 0% 50% 50% 100%;">
+            <i
+              class="fa-solid fa-splotch fa-fade mt-3 bg-light border rounded-circle py-3"
+              style="height: 80px; width: 80px; font-size: 40px ; color: #E100FF;"
+            ></i>
             </div>
-
-            <div class="card-footer justify-content-end d-flex">
-              <a
-                href="#"
-                class="card-link text-decoration-none text-dark small align-self-end"
-                type="button"
-              >
-                Read More
-                <span
-                  ><i class="fa-solid fa-arrow-right" style="color: #000000"></i
-                ></span>
-              </a>
-            </div>
+             <div
+            class="card-body text-center align-items-center d-flex flex-column" style="font-size: 15px;"
+          >
+            <h5 class="card-title mt-3">Brand Development</h5>
+            <p class="card-text small text-muted mb-3">
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam quis nostrud exercitation.
+            </p>
           </div>
-        </div>
 
-        <div class="col-md-4">
-          <div class="card card1" style="animation: zoom-in 2s">
-            <div
-              class="card-body text-center align-items-center d-flex flex-column"
+          <div class="card-footer justify-content-center d-flex">
+            <a
+              href="#"
+              class="card-link text-decoration-none text-white small align-self-end two"
+              type="button"
             >
-              <i
-                class="fa-solid fa-people-group fa-fade bg-dark text-white border rounded-circle py-3 mt-3"
-                style="height: 80px; width: 80px; font-size: 40px"
-              ></i>
-              <h5 class="card-title mt-3">Team Building</h5>
-              <p class="card-text small text-muted mb-3">
-                Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit
-                amet quam vehicula elementum sed sit amet dui.
-              </p>
-            </div>
-
-            <div class="card-footer justify-content-end d-flex">
-              <a
-                href="#"
-                class="card-link text-decoration-none text-dark small align-self-end"
-                type="button"
-              >
-                Read More
-                <span
-                  ><i class="fa-solid fa-arrow-right" style="color: #000000"></i
-                ></span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card card1" style="animation: slide-from-right 2s">
-            <div
-              class="card-body text-center align-items-center d-flex flex-column"
-            >
-              <i
-                class="fa-solid fa-magnifying-glass-chart fa-fade mt-3 bg-dark text-white border rounded-circle py-3"
-                style="
-                  color: #000000;
-                  height: 80px;
-                  width: 80px;
-                  font-size: 40px;
-                "
-              ></i>
-              <h5 class="card-title mt-3">Data Analytics</h5>
-              <p class="card-text small text-muted mb-3">
-                Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit
-                eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh.
-              </p>
-            </div>
-
-            <div class="card-footer justify-content-end d-flex">
-              <a
-                href="#"
-                class="card-link text-decoration-none text-dark small align-self-end"
-                type="button"
-              >
-                Read More
-                <span
-                  ><i class="fa-solid fa-arrow-right" style="color: #000000"></i
-                ></span>
-              </a>
-            </div>
+              Read More
+              <span
+                ><i class="fa-solid fa-arrow-right" style="color: white"></i
+              ></span>
+            </a>
           </div>
         </div>
       </div>
+
+      <div class="col-md-4">
+        <div class="card card1" style="animation: slide-from-right2 2s">
+         <div class="card-header header3 header-all"  style="border-radius:100% 0% 100% 0% / 0% 50% 50% 100%;">
+            <i
+              class="fa-solid fa-code fa-fade bg-white mt-3  border rounded-circle py-3"
+              style="color: #3f2b96; height: 80px; width: 80px; font-size: 40px"
+            ></i>
+            </div>
+             <div
+            class="card-body text-center align-items-center d-flex flex-column" style="font-size: 15px;"
+          >
+            <h5 class="card-title mt-3">Digital Solutions</h5>
+            <p class="card-text small text-muted mb-3">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris
+              vitae congue nulla. Proin eget tortor risus vestibulum.
+            </p>
+          </div>
+
+         <div class="card-footer justify-content-center d-flex">
+            <a
+              href="#"
+              class="card-link text-decoration-none text-white small align-self-end three"
+              type="button"
+            >
+              Read More
+              <span
+                ><i class="fa-solid fa-arrow-right" style="color: white"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-5 justify-content-center  mx-auto ms-5">
+      <div class="col-md-4">
+        <div class="card card1" style="animation: slide-from-left2 2s">
+        <div class="card-header header4 header-all"  style="border-radius:100% 0% 100% 0% / 0% 50% 50% 100%;">
+            <i
+              class="fa-solid fa-cubes fa-fade bg-light border mt-3 rounded-circle py-3"
+              style="height: 80px; width: 80px; font-size: 40px; color: #11998e;"
+            ></i>
+            </div>
+              <div
+            class="card-body text-center align-items-center d-flex flex-column" style="font-size: 15px;"
+          >
+            <h5 class="card-title mt-3">Marketing Strategies</h5>
+            <p class="card-text small text-muted mb-3">
+              Vivamus magna justo lacinia eget consectetur sed convallis at
+              tellus. Cras ultricies ligula sed magna dictum porta.
+            </p>
+          </div>
+
+       <div class="card-footer justify-content-center d-flex">
+            <a
+              href="#"
+              class="card-link text-decoration-none text-white small align-self-end four"
+              type="button"
+            >
+              Read More
+              <span
+                ><i class="fa-solid fa-arrow-right" style="color: white"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card card1" >
+         <div class="card-header header1 header-all"  style="border-radius:100% 0% 100% 0% / 0% 50% 50% 100%;">
+            <i
+              class="fa-solid fa-people-group fa-fade bg-light border rounded-circle py-3 mt-3"
+              style="height: 80px; width: 80px; font-size: 40px; color: #f12711;"
+            ></i>
+            </div>
+             <div
+            class="card-body text-center align-items-center d-flex flex-column" style="font-size: 15px;"
+          >
+            <h5 class="card-title mt-3">Team Building</h5>
+            <p class="card-text small text-muted mb-3">
+              Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit
+              amet quam vehicula elementum sed sit amet dui.
+            </p>
+          </div>
+
+       <div class="card-footer justify-content-center d-flex">
+            <a
+              href="#"
+              class="card-link text-decoration-none text-white small align-self-end one"
+              type="button"
+            >
+              Read More
+              <span
+                ><i class="fa-solid fa-arrow-right" style="color: white"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card card1" style="animation: slide-from-right2 2s">
+         <div class="card-header header2 header-all"  style="border-radius:100% 0% 100% 0% / 0% 50% 50% 100%;">
+            <i
+              class="fa-solid fa-magnifying-glass-chart fa-fade mt-3 bg-light  border rounded-circle py-3"
+              style=" height: 80px; width: 80px; font-size: 40px; color: #E100FF;"
+            ></i>
+            </div>
+             <div
+            class="card-body text-center align-items-center d-flex flex-column" style="font-size: 15px;"
+          >
+            <h5 class="card-title mt-3">Data Analytics</h5>
+            <p class="card-text small text-muted mb-3">
+              Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit
+              eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh.
+            </p>
+          </div>
+
+       <div class="card-footer justify-content-center d-flex">
+            <a
+              href="#"
+              class="card-link text-decoration-none text-white small align-self-end two"
+              type="button"
+            >
+              Read More
+              <span
+                ><i class="fa-solid fa-arrow-right" style="color: white"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
     </div>
     <!-- end services sec -->
     <!-- why choose us sec -->
     <div class="container justify-content-center">
       <div class="row mt-5">
         <div
-          class="col-md-8 offset-md-2 text-center mb-5 mt-2"
+          class="col-md-8 mx-auto text-center mb-5 mt-2"
           style="animation: zoom-in 2s"
         >
           <p><ins>Why Us?</ins></p>
@@ -544,7 +613,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6" style="animation: slide-from-left 2s;">
+        <div class="col-md-6" style="animation: slide-from-left 2s">
           <h5 class="display-5">Why Partner With Us</h5>
           <p class="small text-muted">
             We deliver exceptional results through proven expertise,
@@ -553,19 +622,19 @@
             competitive advantage.
           </p>
         </div>
-        <div class="col-md-6" style="animation: slide-from-right 2s;">
+        <div class="col-md-6" style="animation: slide-from-right 2s">
           <img src="./images/choose2.jpg" alt="" class="img-fluid rounded" />
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6 d-flex mt-5" style="animation: slide-from-left 2s;">
+        <div class="col-md-6 d-flex mt-5" style="animation: slide-from-left 2s">
           <dd class="col-md-3">
             <i
-              class="fa-solid fa-lightbulb bg-dark text-white border rounded-circle py-3 mt-3"
+              class="fa-solid fa-lightbulb fa-beat  text-white border rounded-circle d-flex align-items-center justify-content-center"
               style="height: 80px; width: 80px; font-size: 40px"
             ></i>
           </dd>
-          <dt class="col-md-8">
+          <dt class="col-md-8 ms-2">
             <h5>Innovation Leadership</h5>
             <p class="small text-muted">
               We stay ahead of industry trends, implementing cutting-edge
@@ -574,14 +643,17 @@
             </p>
           </dt>
         </div>
-        <div class="col-md-6 d-flex mt-5" style="animation: slide-from-right 2s;">
+        <div
+          class="col-md-6 d-flex mt-5"
+          style="animation: slide-from-right 2s"
+        >
           <dd class="col-md-3">
             <i
-              class="fa-solid fa-user-tie bg-dark text-white border rounded-circle py-3 mt-3"
+              class="fa-solid fa-user-tie fa-beat bg-dark text-white border rounded-circle d-flex align-items-center justify-content-center"
               style="height: 80px; width: 80px; font-size: 40px"
             ></i>
           </dd>
-          <dt class="col-md-8">
+          <dt class="col-md-8 ms-2">
             <h5>Proven Expertise</h5>
             <p class="small text-muted">
               Our team brings decades of combined experience across multiple
@@ -593,14 +665,14 @@
       </div>
 
       <div class="row">
-        <div class="col-md-6 d-flex mt-5" style="animation: slide-from-left 2s;">
+        <div class="col-md-6 d-flex mt-5" style="animation: slide-from-left 2s">
           <dd class="col-md-3">
             <i
-              class="fa-solid fa-headphones bg-dark text-white border rounded-circle py-3 mt-3"
+              class="fa-solid fa-headphones fa-beat bg-dark text-white border rounded-circle d-flex align-items-center justify-content-center"
               style="height: 80px; width: 80px; font-size: 40px"
             ></i>
           </dd>
-          <dt class="col-md-8">
+          <dt class="col-md-8 ms-2">
             <h5>24/7 Dedicated Support</h5>
             <p class="small text-muted">
               Round-the-clock availability with personalized attention from
@@ -609,14 +681,17 @@
             </p>
           </dt>
         </div>
-        <div class="col-md-6 d-flex mt-5" style="animation: slide-from-right 2s;">
+        <div
+          class="col-md-6 d-flex mt-5"
+          style="animation: slide-from-right 2s"
+        >
           <dd class="col-md-3">
             <i
-              class="fa-solid fa-hand-holding-dollar bg-dark text-white border rounded-circle py-3 mt-3"
+              class="fa-solid fa-hand-holding-dollar fa-beat bg-dark text-white border rounded-circle d-flex align-items-center justify-content-center"
               style="height: 80px; width: 80px; font-size: 40px"
             ></i>
           </dd>
-          <dt class="col-md-8">
+          <dt class="col-md-8 ms-2">
             <h5>Cost Efficiency</h5>
             <p class="small text-muted">
               Streamlined processes and intelligent resource allocation reduce
@@ -629,10 +704,10 @@
     </div>
     <!-- end why us sec -->
     <!-- portfolio sec-->
-    <div class="container justify-content-center ">
+    <div class="container justify-content-center">
       <div class="row mt-5">
         <div
-          class="col-md-8 text-center offset-md-2 mt-4"
+          class="col-md-8 text-center mx-auto"
           style="animation: zoom-in 1.5s"
         >
           <p><ins>Portfolio</ins></p>
@@ -645,326 +720,834 @@
         </div>
       </div>
       <div class="row mt-3">
-        <div class="col-md-8 offset-md-2" style="animation: zoom-in 2s ease;">
-          <div class="list-group small list-group-horizontal">
-            <a
-              href="#"
-              class="list-group-item small list-group-item-action active bg-success border-success"
-              ><ins>All Work</ins></a
-            >
-            <a href="#" class="list-group-item small list-group-item-action"
-              >Digital Design</a
-            >
-            <a href="#" class="list-group-item small list-group-item-action"
-              >Development</a
-            >
-            <a href="#" class="list-group-item small list-group-item-action"
-              >Strategy</a
-            >
-            <a href="#" class="list-group-item small list-group-item-action"
-              >Consulting</a
-            >
-          </div>
+        <div
+          class="col-md-8 d-flex justify-content-center mx-auto btn-group"
+          role="group"
+          style="animation: zoom-in 2s ease"
+        >
+          <button
+            class="btn btn-outline-success active"
+            data-category="all"
+            onclick="filterProducts('all', event)"
+          >
+            All Work
+          </button>
+          <button
+            class="btn btn-outline-success"
+            data-category="digital-design"
+            onclick="filterProducts('digital-design', event)"
+          >
+            Digital Design
+          </button>
+          <button
+            class="btn btn-outline-success"
+            data-category="development"
+            onclick="filterProducts('development', event)"
+          >
+            Development
+          </button>
+          <button
+            class="btn btn-outline-success"
+            data-category="strategy"
+            onclick="filterProducts('strategy', event)"
+          >
+            Strategy
+          </button>
+          <button
+            class="btn btn-outline-success"
+            data-category="consulting"
+            onclick="filterProducts('consulting', event)"
+          >
+            Consulting
+          </button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12 " style="animation: slide-from-left 2s ease;">
-          <div class="col-md-12 d-flex flex-row">
-            <div class="card card2 d-flex flex-row mt-5">
-              <div class="card-img card2-img overflow-hidden position-relative">
-                <img
-                  src="./images/digital design"
-                  class="img2 img-fluid float-left rounded"
-                  alt=""
-                />
 
-                <div class="overlay">
-                  <i
-                    class="fa-solid fa-eye bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
-                    style="height: 50px; width: 50px; font-size: 20px"
-                  ></i>
-                  <i
-                    class="fa-solid fa-paper-plane bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
-                    style="height: 50px; width: 50px; font-size: 20px"
-                  ></i>
-                </div>
+      <div class="row" id="products">
+        <div
+          class="col-md-12 d-flex flex-row digital-design product-card"
+          style="animation: slide-from-left2 2s ease"
+        >
+          <div class="card card2 d-flex flex-row mt-5">
+            <div class="card-img card2-img overflow-hidden position-relative">
+              <img
+                src="./images/digital design"
+                class="img2 img-fluid float-left rounded"
+                alt=""
+              />
+
+              <div class="overlay">
+                <i
+                  class="fa-solid fa-eye bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
+                  style="height: 50px; width: 50px; font-size: 20px"
+                ></i>
+                <i
+                  class="fa-solid fa-paper-plane bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
+                  style="height: 50px; width: 50px; font-size: 20px"
+                ></i>
               </div>
-              <div class="card-body">
-                <div class="d-flex w-100 justify-content-between small mb-5">
-                  <h6 class="small text-uppercase mb-5">digital design</h6>
-                  <small class="text-muted">2024</small>
-                </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex w-100 justify-content-between small mb-5">
+                <h6 class="small text-uppercase mb-5">digital design</h6>
+                <small class="text-muted">2024</small>
+              </div>
 
-                <h5 class="small mt-3 mb-3">Enterprise Digital Platform</h5>
-                <p class="text-muted mt-2 mb-5">
-                  <small
-                    >Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium totam rem
-                    aperiam.</small
-                  >
-                </p>
-                <small class="mt-5">Fortune 500 Company</small>
-                <div class="d-flex justify-content-between small w-50 mt-3">
-                  <small class="text-muted">UX Design</small>
-                  <small class="text-muted">Development</small>
-                  <small class="text-muted">Strategy</small>
-                </div>
+              <h5 class="small mt-3 mb-3">Enterprise Digital Platform</h5>
+              <p class="text-muted mt-2 mb-5">
+                <small
+                  >Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem accusantium doloremque laudantium totam rem
+                  aperiam.</small
+                >
+              </p>
+              <small class="mt-5">Fortune 500 Company</small>
+              <div class="d-flex justify-content-between small w-50 mt-3">
+                <small class="text-muted">UX Design</small>
+                <small class="text-muted">Development</small>
+                <small class="text-muted">Strategy</small>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-12" style="animation: slide-from-right 2s ease;">
-          <div class="col-md-12 d-flex flex-row">
-            <div class="card card2 d-flex flex-row mt-5">
-              <div class="card-body">
-                <div class="d-flex w-100 justify-content-between small mb-5">
-                  <h6 class="small text-uppercase mb-5">development</h6>
-                  <small class="text-muted">2024</small>
-                </div>
-
-                <h5 class="small mt-3 mb-3">SaaS Product Suite</h5>
-                <p class="text-muted mt-2 mb-5">
-                  <small
-                    >At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis praesentium voluptatum deleniti atque
-                    corrupti.</small
-                  >
-                </p>
-                <small class="mt-5">Tech Startup</small>
-                <div class="d-flex justify-content-between small w-50 mt-3">
-                  <small class="text-muted">Full Stack</small>
-                  <small class="text-muted"> Cloud Architecture</small>
-                  <small class="text-muted"> DevOps</small>
-                </div>
+        <div class="col-md-12 d-flex flex-row product-card development">
+          <div class="card card2 d-flex flex-row mt-5"
+          style="animation: slide-from-right2 2s ease">
+            <div class="card-body">
+              <div class="d-flex w-100 justify-content-between small mb-5">
+                <h6 class="small text-uppercase mb-5">development</h6>
+                <small class="text-muted">2024</small>
               </div>
-              <div class="card-img card2-img overflow-hidden position-relative">
-                <img
-                  src="./images/saas2"
-                  class="img2 img-fluid rounded"
-                  alt=""
-                />
 
-                <div class="overlay">
-                  <i
-                    class="fa-solid fa-eye bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
-                    style="height: 50px; width: 50px; font-size: 20px"
-                  ></i>
-                  <i
-                    class="fa-solid fa-paper-plane bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
-                    style="height: 50px; width: 50px; font-size: 20px"
-                  ></i>
-                </div>
+              <h5 class="small mt-3 mb-3">SaaS Product Suite</h5>
+              <p class="text-muted mt-2 mb-5">
+                <small
+                  >At vero eos et accusamus et iusto odio dignissimos ducimus
+                  qui blanditiis praesentium voluptatum deleniti atque
+                  corrupti.</small
+                >
+              </p>
+              <small class="mt-5">Tech Startup</small>
+              <div class="d-flex justify-content-between small w-50 mt-3">
+                <small class="text-muted">Full Stack</small>
+                <small class="text-muted"> Cloud Architecture</small>
+                <small class="text-muted"> DevOps</small>
+              </div>
+            </div>
+            <div class="card-img card2-img overflow-hidden position-relative">
+              <img src="./images/saas2" class="img2 img-fluid rounded" alt="" />
+
+              <div class="overlay">
+                <i
+                  class="fa-solid fa-eye bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
+                  style="height: 50px; width: 50px; font-size: 20px"
+                ></i>
+                <i
+                  class="fa-solid fa-paper-plane bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
+                  style="height: 50px; width: 50px; font-size: 20px"
+                ></i>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
+        <div
+          class="col-md-12 d-flex flex-row product-card strategy"
+          style="animation: slide-from-left2 2s ease"
+        >
+          <div class="card card2 d-flex flex-row mt-5">
+            <div class="card-img card2-img overflow-hidden position-relative">
+              <img
+                src="./images/branding"
+                class="img2 img-fluid float-left rounded"
+                alt=""
+              />
 
-      <div class="row">
-        <div class="col-md-12" style="animation: slide-from-left 2s ease;">
-          <div class="col-md-12 d-flex flex-row">
-            <div class="card card2 d-flex flex-row mt-5">
-              <div class="card-img card2-img overflow-hidden position-relative">
-                <img
-                  src="./images/branding"
-                  class="img2 img-fluid float-left rounded"
-                  alt=""
-                />
-
-                <div class="overlay">
-                  <i
-                    class="fa-solid fa-eye bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
-                    style="height: 50px; width: 50px; font-size: 20px"
-                  ></i>
-                  <i
-                    class="fa-solid fa-paper-plane bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
-                    style="height: 50px; width: 50px; font-size: 20px"
-                  ></i>
-                </div>
+              <div class="overlay">
+                <i
+                  class="fa-solid fa-eye bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
+                  style="height: 50px; width: 50px; font-size: 20px"
+                ></i>
+                <i
+                  class="fa-solid fa-paper-plane bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
+                  style="height: 50px; width: 50px; font-size: 20px"
+                ></i>
               </div>
-              <div class="card-body">
-                <div class="d-flex w-100 justify-content-between small mb-5">
-                  <h6 class="small text-uppercase mb-5">strategy</h6>
-                  <small class="text-muted">2023</small>
-                </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex w-100 justify-content-between small mb-5">
+                <h6 class="small text-uppercase mb-5">strategy</h6>
+                <small class="text-muted">2023</small>
+              </div>
 
-                <h5 class="small mt-3 mb-3">Brand Transformation</h5>
-                <p class="text-muted mt-2 mb-5">
-                  <small
-                    >Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</small
-                  >
-                </p>
-                <small class="mt-5">Global Corporation</small>
-                <div class="d-flex justify-content-between small w-75 mt-3">
-                  <small class="text-muted">Brand Strategy</small>
-                  <small class="text-muted">Visual Identity</small>
-                  <small class="text-muted">Guidelines</small>
-                </div>
+              <h5 class="small mt-3 mb-3">Brand Transformation</h5>
+              <p class="text-muted mt-2 mb-5">
+                <small
+                  >Excepteur sint occaecat cupidatat non proident sunt in culpa
+                  qui officia deserunt mollit anim id est laborum.</small
+                >
+              </p>
+              <small class="mt-5">Global Corporation</small>
+              <div class="d-flex justify-content-between small w-75 mt-3">
+                <small class="text-muted">Brand Strategy</small>
+                <small class="text-muted">Visual Identity</small>
+                <small class="text-muted">Guidelines</small>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-<div class="row">
-        <div class="col-md-12" style="animation: slide-from-right 2s ease;">
-          <div class="col-md-12 d-flex flex-row">
-            <div class="card card2 d-flex flex-row mt-5">
-              <div class="card-body">
-                <div class="d-flex w-100 justify-content-between small mb-5">
-                  <h6 class="small text-uppercase mb-5">Consulting</h6>
-                  <small class="text-muted">2024</small>
-                </div>
-
-                <h5 class="small mt-3 mb-3">Digital Transformation</h5>
-                <p class="text-muted mt-2 mb-5">
-                  <small
-                    >Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small
-                  >
-                </p>
-                <small class="mt-5">Ultimate Care Provider</small>
-                <div class="d-flex justify-content-between small w-75 mt-3">
-                  <small class="text-muted">Process Optimization</small>
-                  <small class="text-muted"> Technology Audit</small>
-                  <small class="text-muted"> Implementation</small>
-                </div>
+        <div class="col-md-12 d-flex flex-row product-card consulting">
+          <div class="card card2 d-flex flex-row mt-5"
+          style="animation: slide-from-right2 2s ease">
+            <div class="card-body">
+              <div class="d-flex w-100 justify-content-between small mb-5">
+                <h6 class="small text-uppercase mb-5">Consulting</h6>
+                <small class="text-muted">2024</small>
               </div>
-              <div class="card-img card2-img overflow-hidden position-relative">
-                <img
-                  src="./images/digital transf.jpeg"
-                  class="img2 img-fluid rounded"
-                  alt=""
-                />
 
-                <div class="overlay">
-                  <i
-                    class="fa-solid fa-eye bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
-                    style="height: 50px; width: 50px; font-size: 20px"
-                  ></i>
-                  <i
-                    class="fa-solid fa-paper-plane bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
-                    style="height: 50px; width: 50px; font-size: 20px"
-                  ></i>
-                </div>
+              <h5 class="small mt-3 mb-3">Digital Transformation</h5>
+              <p class="text-muted mt-2 mb-5">
+                <small
+                  >Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+                  eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua.</small
+                >
+              </p>
+              <small class="mt-5">Ultimate Care Provider</small>
+              <div class="d-flex justify-content-between small w-75 mt-3">
+                <small class="text-muted">Process Optimization</small>
+                <small class="text-muted"> Technology Audit</small>
+                <small class="text-muted"> Implementation</small>
+              </div>
+            </div>
+            <div class="card-img card2-img overflow-hidden position-relative">
+              <img
+                src="./images/digital transf.jpeg"
+                class="img2 img-fluid rounded"
+                alt=""
+              />
+
+              <div class="overlay">
+                <i
+                  class="fa-solid fa-eye bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
+                  style="height: 50px; width: 50px; font-size: 20px"
+                ></i>
+                <i
+                  class="fa-solid fa-paper-plane bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
+                  style="height: 50px; width: 50px; font-size: 20px"
+                ></i>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-<div class="row">
-        <div class="col-md-12" style="animation: slide-from-left 2s ease;">
-          <div class="col-md-12 d-flex flex-row">
-            <div class="card card2 d-flex flex-row mt-5">
-              <div class="card-img card2-img overflow-hidden position-relative">
-                <img
-                  src="./images/e-commerce.jpg"
-                  class="img2 img-fluid float-left rounded"
-                  alt=""
-                />
+        <div
+          class="col-md-12 d-flex flex-row product-card digital-design"
+          style="animation: slide-from-left2 2s ease"
+        >
+          <div class="card card2 d-flex flex-row mt-5">
+            <div class="card-img card2-img overflow-hidden position-relative">
+              <img
+                src="./images/e-commerce.jpg"
+                class="img2 img-fluid float-left rounded"
+                alt=""
+              />
 
-                <div class="overlay">
-                  <i
-                    class="fa-solid fa-eye bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
-                    style="height: 50px; width: 50px; font-size: 20px"
-                  ></i>
-                  <i
-                    class="fa-solid fa-paper-plane bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
-                    style="height: 50px; width: 50px; font-size: 20px"
-                  ></i>
-                </div>
+              <div class="overlay">
+                <i
+                  class="fa-solid fa-eye bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
+                  style="height: 50px; width: 50px; font-size: 20px"
+                ></i>
+                <i
+                  class="fa-solid fa-paper-plane bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
+                  style="height: 50px; width: 50px; font-size: 20px"
+                ></i>
               </div>
-              <div class="card-body">
-                <div class="d-flex w-100 justify-content-between small mb-5">
-                  <h6 class="small text-uppercase mb-5">Digital Design</h6>
-                  <small class="text-muted">2024</small>
-                </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex w-100 justify-content-between small mb-5">
+                <h6 class="small text-uppercase mb-5">Digital Design</h6>
+                <small class="text-muted">2024</small>
+              </div>
 
-                <h5 class="small mt-3 mb-3">E-commerce Experience</h5>
-                <p class="text-muted mt-2 mb-5">
-                  <small
-                    >Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.</small
-                  >
-                </p>
-                <small class="mt-5">Retail Brand</small>
-                <div class="d-flex justify-content-between small w-100 mt-3 ">
-                  <small class="text-muted">User Experience</small>
-                  <small class="text-muted">Interface Design</small>
-                  <small class="text-muted">Conversion Optimization</small>
-                </div>
+              <h5 class="small mt-3 mb-3">E-commerce Experience</h5>
+              <p class="text-muted mt-2 mb-5">
+                <small
+                  >Duis aute irure dolor in reprehenderit in voluptate velit
+                  esse cillum dolore eu fugiat nulla pariatur excepteur
+                  sint.</small
+                >
+              </p>
+              <small class="mt-5">Retail Brand</small>
+              <div class="d-flex justify-content-between small w-100 mt-3">
+                <small class="text-muted">User Experience</small>
+                <small class="text-muted">Interface Design</small>
+                <small class="text-muted">Conversion Optimization</small>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-<div class="row">
-        <div class="col-md-12" style="animation: slide-from-right 2s ease;">
-          <div class="col-md-12 d-flex flex-row">
-            <div class="card card2 d-flex flex-row mt-5">
-              <div class="card-body">
-                <div class="d-flex w-100 justify-content-between small mb-5">
-                  <h6 class="small text-uppercase mb-5">Development</h6>
-                  <small class="text-muted">2023</small>
-                </div>
-
-                <h5 class="small mt-3 mb-3">Mobile Application</h5>
-                <p class="text-muted mt-2 mb-5">
-                  <small
-                    >Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute.</small
-                  >
-                </p>
-                <small class="mt-5">Financial Services</small>
-                <div class="d-flex justify-content-between small w-75 mt-3">
-                  <small class="text-muted">iOS Development</small>
-                  <small class="text-muted">Android Development</small>
-                  <small class="text-muted">API Integration</small>
-                </div>
+        <div class="col-md-12 d-flex flex-row product-card development">
+          <div class="card card2 d-flex flex-row mt-5"
+          style="animation: slide-from-right2 2s ease">
+            <div class="card-body">
+              <div class="d-flex w-100 justify-content-between small mb-5">
+                <h6 class="small text-uppercase mb-5">Development</h6>
+                <small class="text-muted">2023</small>
               </div>
-              <div class="card-img card2-img overflow-hidden position-relative">
-                <img
-                  src="./images/mobile app"
-                  class="img2 img-fluid rounded"
-                  alt=""
-                />
 
-                <div class="overlay">
-                  <i
-                    class="fa-solid fa-eye bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
-                    style="height: 50px; width: 50px; font-size: 20px"
-                  ></i>
-                  <i
-                    class="fa-solid fa-paper-plane bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
-                    style="height: 50px; width: 50px; font-size: 20px"
-                  ></i>
-                </div>
+              <h5 class="small mt-3 mb-3">Mobile Application</h5>
+              <p class="text-muted mt-2 mb-5">
+                <small
+                  >Ut enim ad minim veniam quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat duis
+                  aute.</small
+                >
+              </p>
+              <small class="mt-5">Financial Services</small>
+              <div class="d-flex justify-content-between small w-75 mt-3">
+                <small class="text-muted">iOS Development</small>
+                <small class="text-muted">Android Development</small>
+                <small class="text-muted">API Integration</small>
+              </div>
+            </div>
+            <div class="card-img card2-img overflow-hidden position-relative">
+              <img
+                src="./images/mobile app"
+                class="img2 img-fluid rounded"
+                alt=""
+              />
+
+              <div class="overlay">
+                <i
+                  class="fa-solid fa-eye bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
+                  style="height: 50px; width: 50px; font-size: 20px"
+                ></i>
+                <i
+                  class="fa-solid fa-paper-plane bg-success text-white border rounded-circle d-flex align-items-center justify-content-center"
+                  style="height: 50px; width: 50px; font-size: 20px"
+                ></i>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row mt-5 mb-5">
-        <div class="col-md-5 text-center d-flex flex-column justify-content-center offset-md-4">
-            <h1 class="lead" style="font-size: 30px;">Ready to elevate your business?</h1>
-            <p class="small text-muted">Let's discuss how we can transform your digital presence and drive meaningful results for your organization.</p>
-       <div class="col-md-10 d-flex justify-content-center mt-2 small ms-4">
-        <button class="btn btn-dark small portfolio-btn"
-        type="button"><small>Start Conversation</small>
-             <span
-                  ><i class="fa-solid fa-arrow-right portfolio-arrow"></i
-                ></span>
-        </button>
-        <a href="#" class="ms-5 py-2 small  text-decoration-none text-muted portfolio-link " 
-        role="button">View All Projects</a>
-       </div>
-       
         </div>
       </div>
     </div>
+
+    <!-- CTA -->
+    <section>
+      <div class="container justify-content-center">
+        <div class="row mt-5 mb-5">
+          <div
+            class="col-md-6 text-center d-flex flex-column justify-content-center mx-auto"
+          >
+            <h1 class="lead" style="font-size: 30px">
+              Ready to elevate your business?
+            </h1>
+            <p class="small text-muted">
+              Let's discuss how we can transform your digital presence and drive
+              meaningful results for your organization.
+            </p>
+            <div
+              class="col-md-10 d-flex justify-content-center mt-2 small ms-4"
+            >
+              <button class="btn btn-dark small portfolio-btn" type="button">
+                <small>Start Conversation</small>
+                <span
+                  ><i class="fa-solid fa-arrow-right portfolio-arrow"></i
+                ></span>
+              </button>
+              <a
+                href="#"
+                class="ms-5 py-2 small text-decoration-none text-muted portfolio-link"
+                role="button"
+                >View All Projects</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end portfolio -->
+      <!-- team -->
+    <div class="container justify-content-center">
+      <div class="row mt-5">
+        <div class="col-md-8 mx-auto text-center mb-5 mt-4" style="animation: zoom-in 2s ease;">
+          <p><ins>Team</ins></p>
+          <h5 class="display-5">Meet Our Team</h5>
+          <p class="small text-muted">
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit. Sed ut perspiciatis unde omnis iste natus error
+            sit voluptatem accusantium doloremque laudantium totam rem aperiam
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 card-group" style="animation: zoom-in 2s ease;">
+          <div class="card card3 col-md-3">
+            <div class="overflow-hidden">
+              <img
+                src="./images/jennifer.jpg"
+                alt=""
+                class="card-img-top img-fluid"
+              />
+            </div>
+            <div class="card-body d-flex flex-column text-center">
+              <div class="card-title">
+                <h5 class="lead">Sarah Johnson</h5>
+                <p class="small">Chief Executive Officer</p>
+              </div>
+              <div class="card-text">
+                <p class="card-text small text-muted">
+                  Pellentesque habitant morbi tristique senectus et netus et
+                  malesuada fames ac turpis egestas vestibulum tortor quam.
+                </p>
+                <div
+                  class="card-icons d-flex justify-content-center small text-muted align-items-center"
+                >
+                  <i
+                    class="fa-brands fa-x-twitter border rounded-circle d-flex align-items-center justify-content-center me-1"
+                    style="height: 25px; width: 25px"
+                  ></i>
+                  <i
+                    class="fa-brands fa-square-linkedin border rounded-circle d-flex align-items-center justify-content-center me-1"
+                    style="height: 25px; width: 25px"
+                  ></i>
+                  <i
+                    class="fa-brands fa-instagram border rounded-circle d-flex align-items-center justify-content-center"
+                    style="height: 25px; width: 25px"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card3 col-md-3">
+            <div class="overflow-hidden">
+              <img
+                src="./images/alex2.jpg"
+                alt=""
+                class="card-img-top img-fluid"
+              />
+            </div>
+            <div class="card-body d-flex flex-column text-center">
+              <div class="card-title">
+                <h5 class="lead">Michael Chen</h5>
+                <p class="small">Chief Technology Officer</p>
+              </div>
+              <div class="card-text">
+                <p class="card-text small text-muted">
+                  Mauris blandit aliquet elit eget tincidunt nibh pulvinar
+                  rutrum tellus ac blandit elit eget tincidunt mauris.
+                </p>
+                <div
+                  class="card-icons d-flex justify-content-center small text-muted align-items-center"
+                >
+                  <i
+                    class="fa-brands fa-x-twitter border rounded-circle d-flex align-items-center justify-content-center me-1"
+                    style="height: 25px; width: 25px"
+                  ></i>
+                  <i
+                    class="fa-brands fa-square-linkedin border rounded-circle d-flex align-items-center justify-content-center me-1"
+                    style="height: 25px; width: 25px"
+                  ></i>
+                  <i
+                    class="fa-brands fa-github border rounded-circle d-flex align-items-center justify-content-center"
+                    style="height: 25px; width: 25px"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card3 col-md-3">
+            <div class="overflow-hidden">
+              <img
+                src="./images/jennifer2.jpg"
+                alt=""
+                class="card-img-top img-fluid"
+              />
+            </div>
+            <div class="card-body d-flex flex-column text-center">
+              <div class="card-title">
+                <h5 class="lead">Emily Rodriguez</h5>
+                <p class="small">Creative Director</p>
+              </div>
+              <div class="card-text">
+                <p class="card-text small text-muted">
+                  Vestibulum ante ipsum primis in faucibus orci luctus et
+                  ultrices posuere cubilia curae donec velit neque auctor.
+                </p>
+                <div
+                  class="card-icons d-flex justify-content-center small text-muted align-items-center"
+                >
+                  <i
+                    class="fa-brands fa-x-twitter border rounded-circle d-flex align-items-center justify-content-center me-1"
+                    style="height: 25px; width: 25px"
+                  ></i>
+                  <i
+                    class="fa-brands fa-square-linkedin border rounded-circle d-flex align-items-center justify-content-center me-1"
+                    style="height: 25px; width: 25px"
+                  ></i>
+                  <i
+                    class="fa-solid fa-basketball border rounded-circle d-flex align-items-center justify-content-center"
+                    style="height: 25px; width: 25px"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card3 col-md-3">
+            <div class="overflow-hidden">
+              <img
+                src="./images/person-m-4.jpg"
+                alt=""
+                class="card-img-top img-fluid"
+              />
+            </div>
+            <div class="card-body d-flex flex-column text-center">
+              <div class="card-title">
+                <h5 class="lead">David Thompson</h5>
+                <p class="small">Head of Operations</p>
+              </div>
+              <div class="card-text">
+                <p class="card-text small text-muted">
+                  Curabitur arcu erat accumsan id imperdiet et porttitor at sem
+                  nulla facilisi mauris sit amet massa vitae tortor.
+                </p>
+                <div
+                  class="card-icons d-flex justify-content-center small text-muted align-items-center"
+                >
+                  <i
+                    class="fa-brands fa-x-twitter border rounded-circle d-flex align-items-center justify-content-center me-1"
+                    style="height: 25px; width: 25px"
+                  ></i>
+                  <i
+                    class="fa-brands fa-square-linkedin border rounded-circle d-flex align-items-center justify-content-center me-1"
+                    style="height: 25px; width: 25px"
+                  ></i>
+                  <i
+                    class="fa-brands fa-facebook border rounded-circle d-flex align-items-center justify-content-center"
+                    style="height: 25px; width: 25px"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end team -->
+
+    <!-- testimonials -->
+      <div class="container-fluid justify-content-center team-container p-2 mt-3">
+    <div class="container justify-content-center">
+      <div class="row mt-5">
+        <div class="col-md-8 mx-auto text-center mb-5 mt-4">
+          <p class="text-light mt-3"><ins>Testimonials</ins></p>
+          <h5 class="display-5 text-light">Customer Reviews</h5>
+          <p class="small text-white">
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit. Sed ut perspiciatis unde omnis iste natus error
+            sit voluptatem accusantium doloremque laudantium totam rem aperiam
+          </p>
+        </div>
+      </div>
+
+     
+      
+      <div class="row my-5">
+        <div
+          class="carousel-container"
+          style="position: relative; overflow: hidden"
+        >
+         
+          <div
+            class="cards-wrapper"
+            id="slider"
+            style="display: flex; transition: transform 0.5s ease"
+          >
+
+          
+            <div class="col-md-4">
+              <div
+                class="card card4   text-white d-flex justify-content-center text-center"
+                style="min-width: 250px; margin: 10px; flex-shrink: 0"
+              >
+                <div class="card-img mt-3">
+                  <img
+                    class="img-fluid w-25 border rounded-circle"
+                    src="./images/robert.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <div style="font-size: 12px">
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                  </div>
+                  <div class="card-text text-light small">
+                    <q>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officiis, ut.
+                    </q>
+                  </div>
+                  <div class="card-title mt-2">
+                    <h6>Roberto Jay</h6>
+                    <p class="small text-light">UX Designer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div
+                class="card card4 text-white d-flex justify-content-center text-center"
+                style="min-width: 250px; margin: 10px; flex-shrink: 0"
+              >
+                <div class="card-img mt-3">
+                  <img
+                    class="img-fluid w-25 border rounded-circle"
+                    src="./images/car3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <div style="font-size: 12px">
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                  </div>
+                  <div class="card-text text-white small">
+                    <q>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officiis, ut.
+                    </q>
+                  </div>
+                  <div class="card-title mt-2">
+                    <h6>Rachel Chen</h6>
+                    <p class="small text-light">Project Manager</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div
+                class="card card4  text-white d-flex justify-content-center text-center"
+                style="min-width: 250px; margin: 10px; flex-shrink: 0"
+              >
+                <div class="card-img mt-3">
+                  <img
+                    class="img-fluid w-25 border rounded-circle"
+                    src="./images/car2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <div style="font-size: 12px">
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                  </div>
+                  <div class="card-text text-light small">
+                    <q>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officiis, ut.</q
+                    >
+                  </div>
+                  <div class="card-title">
+                    <h6 class="mt-2">David Rodriguez</h6>
+                    <p class="small text-light">Software Engineer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div
+                class="card card4  text-white d-flex justify-content-center text-center"
+                style="min-width: 250px; margin: 10px; flex-shrink: 0"
+              >
+                <div class="card-img mt-3">
+                  <img
+                    class="img-fluid w-25 border rounded-circle"
+                    src="./images/car1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <div style="font-size: 12px">
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                  </div>
+                  <div class="card-text text-light small">
+                    <q>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officiis, ut.</q
+                    >
+                  </div>
+                  <div class="card-title">
+                    <h6 class="mt-2">Amanda Wilson</h6>
+                    <p class="small text-light">Creative Director</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div
+                class="card card4  text-white d-flex justify-content-center text-center"
+                style="min-width: 250px; margin: 10px; flex-shrink: 0"
+              >
+                <div class="card-img mt-3">
+                  <img
+                    class="img-fluid w-25 border rounded-circle"
+                    src="./images/car4.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <div style="font-size: 12px">
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                  </div>
+                  <div class="card-text text-light small">
+                    <q>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officiis, ut.</q
+                    >
+                  </div>
+                  <div class="card-title mt-2">
+                    <h6>Ryan Thompson</h6>
+                    <p class="small text-light">Business Analyst</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="arrow-btns ">
+           <button class="arrow-btn arrow-left rounded-circle p-2 bg-dark" onclick="moveSlide(-1, true)">
+             <i class="fa-solid fa-caret-left fa-fade " style="color: #ffd43b"></i>
+           
+          </button>
+          <button class="arrow-btn arrow-right bg-dark rounded-circle p-2 " onclick="moveSlide(1, true)">
+            <i class="fa-solid fa-caret-right fa-fade " style="color: #ffd43b"  ></i>
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    <script>
+      // counter
+      function animateCounter(counter) {
+        const target = +counter.getAttribute("data-target");
+        const speed = 200;
+        let count = 0;
+        const increment = Math.ceil(target / speed);
+        function update() {
+          count += increment;
+          if (count > target) count = target;
+          counter.textContent = count;
+          if (count < target) {
+            requestAnimationFrame(update);
+          }
+        }
+        update();
+      }
+      document.querySelectorAll(".counter-number").forEach(animateCounter);
+
+      // filter
+
+      function filterProducts(category, evt) {
+        const products = document.querySelectorAll(".product-card");
+        const buttons = document.querySelectorAll(".btn-group .btn");
+        buttons.forEach((btn) =>
+          btn.classList.toggle(
+            "active",
+            btn.getAttribute("data-category") === category
+          )
+        );
+        if (evt?.currentTarget) {
+          evt.currentTarget.classList.add("active");
+        }
+        products.forEach((product) => {
+          if (category === "all" || product.classList.contains(category)) {
+            product.classList.remove("d-none");
+          } else {
+            product.classList.add("d-none");
+          }
+        });
+      }
+      window.onload = () => filterProducts("all");
+
+      // carousel
+
+      const slider = document.getElementById("slider");
+      const carouselContainer = slider.closest(".carousel-container");
+      const cardWidth = 240;
+      let ScrollPosition = 0;
+      let autoSlideInterval;
+
+      function moveSlide(direction, restartTimer = false) {
+        ScrollPosition += direction * cardWidth;
+        const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+        if (ScrollPosition >= maxScroll) {
+          ScrollPosition = 0; // Loop back to start
+        } else if (ScrollPosition < 0) {
+          ScrollPosition = maxScroll; // Loop to end if going backwards
+        }
+
+        slider.style.transform = `translateX(-${ScrollPosition}px)`;
+
+        // Restart auto-slide timer if manually triggered
+        if (restartTimer) {
+          clearInterval(autoSlideInterval);
+          startAutoSlide();
+        }
+      }
+
+      // Auto-advance every 0.3 seconds
+      function startAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(() => {
+          moveSlide(1);
+        }, 1500);
+      }
+
+      // Pause on hover
+      if (carouselContainer) {
+        carouselContainer.addEventListener("mouseenter", () => {
+          clearInterval(autoSlideInterval);
+        });
+
+        carouselContainer.addEventListener("mouseleave", () => {
+          startAutoSlide();
+        });
+      }
+
+      // Start auto-slide
+      startAutoSlide();
+    </script>
 
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
