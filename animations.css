@@ -276,3 +276,8 @@
 .arrow-btns {
   transform: translateX(90%);
 }
+/* footer */
+.f-iconshover{
+  color: white; border-color: white;
+  
+}

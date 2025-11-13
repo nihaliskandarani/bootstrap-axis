@@ -719,42 +719,42 @@
           </p>
         </div>
       </div>
-      <div class="row mt-3">
+      <div class="row mt-3 d-flex">
         <div
-          class="col-md-8 d-flex justify-content-center mx-auto btn-group"
+          class="col-md-6 small  d-flex justify-content-center mx-auto btn-group"
           role="group"
           style="animation: zoom-in 2s ease"
         >
           <button
-            class="btn btn-outline-success active"
+            class="btn btn-outline-success active btn-sm "
             data-category="all"
             onclick="filterProducts('all', event)"
           >
-            All Work
+           <small>All Work</small> 
           </button>
           <button
-            class="btn btn-outline-success"
+            class="btn btn-outline-success btn-sm "
             data-category="digital-design"
             onclick="filterProducts('digital-design', event)"
           >
-            Digital Design
+           <small> Digital Design </small>
           </button>
           <button
-            class="btn btn-outline-success"
+            class="btn btn-outline-success btn-sm "
             data-category="development"
-            onclick="filterProducts('development', event)"
+            onclick="filterProducts('development', event)" 
           >
-            Development
+           <small> Development </small>
           </button>
           <button
-            class="btn btn-outline-success"
+            class="btn btn-outline-success btn-sm "
             data-category="strategy"
             onclick="filterProducts('strategy', event)"
           >
-            Strategy
+           <small>Strategy </small>
           </button>
           <button
-            class="btn btn-outline-success"
+            class="btn btn-outline-success btn-sm "
             data-category="consulting"
             onclick="filterProducts('consulting', event)"
           >
@@ -1517,8 +1517,8 @@ New York, NY 10022</p>
     <form action="">
       <fieldset>
         <legend >Send Us a Message</legend>
-        <div class="d-flex">
-          <div class="d-flex flex-column col-md-6 me-1 mt-2">
+        <div class="d-flex mt-2">
+          <div class="d-flex flex-column col-md-6 me-1 ">
         <label for="" class="form-label small">Full Name</label>
         <input type="text" class="form-control">
         </div>
@@ -1527,10 +1527,10 @@ New York, NY 10022</p>
         <input type="text" class="form-control">
         </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 ">
         <label for="" class="form-label small">Subject</label>
         <input type="text" class="form-control">
-        <label for="" class="form-label small mt-2" >Message</label>
+        <label for="" class="form-label small" >Message</label>
         <textarea name="Message" id="" class="form-control " style="height: 200px;"></textarea>
         <button class="btn btn-dark mt-2 small"
         type="submit">Send Message  <span
@@ -1546,7 +1546,79 @@ New York, NY 10022</p>
   </div>
  </div>
  <!-- end contact -->
+<!-- footer -->
+ <footer>
+  <div class="container-fluid mt-5 bg-dark py-5">
+<div class="container justify-content-center ">
+  <div class="row mt-5">
+  <div class="col-md-4 mt-5">
+    <h3 class="lead text-white">Axis</h3>
+    <p class="small text-white">Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+<div class="d-flex f-icons">
+     <i
+                    class="fa-brands fa-x-twitter   rounded-circle d-flex align-items-center justify-content-center me-1"
+                    style="height: 25px; width: 25px; border: 1px solid gray; color: gray;"
+                  ></i>
+                  
+                  <i
+                    class="fa-brands fa-instagram   rounded-circle d-flex align-items-center justify-content-center"
+                    style="height: 25px; width: 25px; border: 1px solid gray; color: gray;"
+                  ></i>
+                  <i
+                    class="fa-brands fa-square-linkedin  f-icons rounded-circle d-flex align-items-center justify-content-center me-1"
+                    style="height: 25px; width: 25px; border: 1px solid gray; color: gray;"
+                  ></i>
+                   <i
+                    class="fa-brands fa-facebook  rounded-circle d-flex align-items-center justify-content-center"
+                    style="height: 25px; width: 25px; border: 1px solid gray; color: gray;"
+                  ></i>
+</div>
 
+</div>
+<div class="col-md-2 d-flex flex-column mt-5 gap-2 ms-3">
+  <h6 class="text-white small">Useful Links</h6>
+  <a href="#" class="text-white small text-decoration-none" style="font-size: 11px;">Home</a>
+  <a href="#"class="text-white small text-decoration-none" style="font-size: 11px;">About Us</a>
+  <a href="#"class="text-white small text-decoration-none" style="font-size: 11px;">Services</a>
+  <a href="#"class="text-white small text-decoration-none" style="font-size: 11px;">Terms of Service</a>
+  <a href="#"class="text-white small text-decoration-none" style="font-size: 11px;">Privacy Policy</a>
+</div>
+
+<div class="col-md-2 d-flex flex-column mt-5 gap-2 ms-3">
+  <h6 class="text-white small">Our Services</h6>
+  <a href="#" class="text-white small text-decoration-none" style="font-size: 11px;">Web Design</a>
+  <a href="#"class="text-white small text-decoration-none" style="font-size: 11px;">Web Development</a>
+  <a href="#"class="text-white small text-decoration-none" style="font-size: 11px;">Product Management</a>
+  <a href="#"class="text-white small text-decoration-none" style="font-size: 11px;">Marketing</a>
+  <a href="#"class="text-white small text-decoration-none" style="font-size: 11px;">Graphic Design</a>
+</div>
+
+<div class="col-md-2 d-flex flex-column mt-5 gap-2 ms-3">
+  <h6 class="text-white" style="font-size: 12px;">Contact Us</h6>
+  <p class="text-white" style="font-size: 12px;">A108 Adam Street
+
+New York, NY 535022
+
+United States</p>
+<p class="text-white h1"style="font-size: 12px;">Phone: <span class="lead" style="font-size: 12px;"> +1 5589 55488 55</span></p>
+<p class="text-white" style="font-size: 12px;">Email: <span class="lead" style="font-size: 12px;">info@example.com</span></p>
+</div>
+  </div>
+  <div class="col-md-8 text-center mx-auto mt-4 py-2 rounded "
+  style="background-color: rgba(255, 255, 255, 0.05);">
+       <p class="text-white small">
+            Copyright &copy; Axis - All Rights Reserved.
+          </p>
+
+          <p class="text-white small ">
+             — Designed with
+            <span class="text-danger"><i class="fa-solid fa-heart"></i></span> by
+            <span>Nihal Iskandarani</span>
+          </p>
+  </div>
+</div>
+</div>
+ </footer>
 
 
 
